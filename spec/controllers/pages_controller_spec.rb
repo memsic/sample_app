@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe "Pages" do
+describe PagesController do
+  render_views
 
   describe "Home page" do
-
     it "should have the h1 'Sample App'" do
       visit '/pages/home'
       page.should have_selector('h1', :text => 'Sample App')
@@ -22,7 +22,6 @@ describe "Pages" do
   end
 
   describe "Help page" do
-
     it "should have the h1 'Help'" do
       visit '/pages/help'
       page.should have_selector('h1', :text => 'Help')
@@ -36,7 +35,6 @@ describe "Pages" do
   end
 
   describe "About page" do
-
     it "should have the h1 'About Us'" do
       visit '/pages/about'
       page.should have_selector('h1', :text => 'About Us')
