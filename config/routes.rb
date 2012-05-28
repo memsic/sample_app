@@ -1,11 +1,9 @@
 SampleApp::Application.routes.draw do
-  get "pages/home"
+  root to: 'pages#home'
   
-  get "pages/about"
-  
-  get "pages/contact"
-  
-  get "pages/help"
+  match '/help',    to: 'pages#help'
+  match '/about',   to: 'pages#about'
+  match '/contact', to: 'pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
